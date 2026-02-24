@@ -2,137 +2,462 @@
 <html lang="ro-RO">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balustrada din Sticla – Grusman Exclusive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Balustradă din Sticlă – Grusman Exclusive</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        :root{--ast-global-color-0:#191919;--ast-global-color-1:#3a3a3a;--ast-global-color-2:#3a3a3a;--ast-global-color-3:#4B4F58;--ast-global-color-4:#F5F5F5;--ast-global-color-5:#FFFFFF;--ast-global-color-6:#F2F5F7;--ast-global-color-7:#424242;--ast-global-color-8:#000000}
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Roboto',sans-serif;font-size:15px;line-height:1.65em;color:var(--ast-global-color-3);background:#fff}
-        h1,h2,h3,h4,h5,h6{font-family:'Ubuntu',sans-serif;font-weight:400;color:var(--ast-global-color-2)}
-        a{color:#191919;text-decoration:none}
-        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        /* CSS Variables from Grusman.ro */
+        :root {
+            --ast-global-color-0: #191919;
+            --ast-global-color-1: #3a3a3a;
+            --ast-global-color-2: #3a3a3a;
+            --ast-global-color-3: #4B4F58;
+            --ast-global-color-4: #F5F5F5;
+            --ast-global-color-5: #FFFFFF;
+            --ast-global-color-6: #F2F5F7;
+            --ast-global-color-7: #424242;
+            --ast-global-color-8: #000000;
+            --ast-container-default-xlg-padding: 3em;
+            --ast-container-default-lg-padding: 3em;
+            --ast-normal-container-width: 1200px;
+        }
         
-        /* Header */
-        .site-header{background:var(--ast-global-color-4);border-bottom:1px solid var(--ast-global-color-6)}
-        .header-main{padding:20px 0;display:flex;justify-content:space-between;align-items:center}
-        .site-title{font-size:35px;font-family:'Ubuntu',sans-serif}
-        .site-title a{color:var(--ast-global-color-2)}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* Product Header */
-        .product-header{background:linear-gradient(135deg,#1a365d 0%,#2c5282 100%);color:#fff;padding:60px 0;text-align:center}
-        .product-header h1{font-size:40px;color:#fff;margin-bottom:10px}
-        .product-header .subtitle{font-size:18px;opacity:0.9}
+        html { font-size: 93.75%; }
         
-        /* Product Content */
-        .product-content{padding:60px 0}
-        .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
-        .product-image{background:#f8f9fa;border-radius:8px;min-height:500px;display:flex;align-items:center;justify-content:center;border:2px dashed #ddd}
-        .product-image img{max-width:100%;height:auto;border-radius:4px}
-        .product-info h2{font-size:32px;margin-bottom:20px;color:var(--ast-global-color-2)}
-        .product-description{font-size:16px;line-height:1.8;margin-bottom:30px}
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            font-size: 1rem;
+            line-height: 1.65em;
+            color: var(--ast-global-color-3);
+            background-color: #ffffff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 400;
+            color: var(--ast-global-color-2);
+        }
+        
+        h1 { font-size: 40px; font-size: 2.6666666666667rem; line-height: 1.4em; }
+        h2 { font-size: 32px; font-size: 2.1333333333333rem; line-height: 1.3em; }
+        h3 { font-size: 26px; font-size: 1.7333333333333rem; line-height: 1.3em; }
+        
+        a { color: #191919; text-decoration: none; }
+        a:hover, a:focus { color: var(--ast-global-color-1); }
+        
+        .ast-container {
+            max-width: var(--ast-normal-container-width);
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        /* Header - Exact from Grusman */
+        .site-header {
+            background-color: var(--ast-global-color-4);
+            border-bottom: 1px solid var(--ast-global-color-6);
+        }
+        
+        .main-header-bar {
+            border-bottom-width: 1px;
+            border-bottom-color: var(--ast-global-color-6);
+            border-bottom-style: solid;
+            background-color: var(--ast-global-color-4);
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .site-header-primary-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0;
+        }
+        
+        .site-branding {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .site-title {
+            font-size: 35px;
+            font-size: 2.3333333333333rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 400;
+            line-height: 1.2em;
+        }
+        
+        .site-title a {
+            color: var(--ast-global-color-2);
+        }
+        
+        .site-title span {
+            color: var(--ast-global-color-3);
+        }
+        
+        /* Navigation */
+        .main-header-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+        
+        .main-header-menu .menu-item {
+            position: relative;
+            line-height: 80px;
+        }
+        
+        .main-header-menu .menu-link {
+            padding: 0 1em;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+        
+        .main-header-menu .menu-link:hover {
+            color: var(--ast-global-color-1);
+        }
+        
+        /* Hero Section */
+        .ast-single-entry-banner {
+            background: var(--ast-global-color-4);
+            padding: 3em 0;
+            text-align: center;
+        }
+        
+        .ast-single-entry-banner h1 {
+            color: var(--ast-global-color-2);
+            margin-bottom: 0.5em;
+        }
+        
+        /* Content */
+        .site-content {
+            padding: 3em 0;
+        }
+        
+        .content-area {
+            width: 100%;
+        }
+        
+        /* Product Layout - Two columns */
+        .product-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 3em;
+        }
+        
+        .product-gallery {
+            position: relative;
+        }
+        
+        .product-main-image {
+            background: #f8f9fa;
+            border: 1px solid var(--ast-global-color-6);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .product-main-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .product-summary {
+            padding: 0 20px;
+        }
+        
+        .product-summary h2 {
+            margin-bottom: 20px;
+            color: var(--ast-global-color-2);
+        }
+        
+        .product-description {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--ast-global-color-3);
+        }
         
         /* Specs Table */
-        .specs-table{width:100%;border-collapse:collapse;margin:30px 0}
-        .specs-table tr{border-bottom:1px solid #eee}
-        .specs-table td{padding:15px 10px}
-        .specs-table td:first-child{font-weight:600;color:var(--ast-global-color-2);width:40%}
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
         
-        /* Advantages */
-        .advantages{background:#f8f9fa;padding:40px;border-radius:8px;margin-top:40px}
-        .advantages h3{font-size:26px;margin-bottom:20px}
-        .advantages ul{list-style:none}
-        .advantages li{padding:12px 0 12px 30px;position:relative;border-bottom:1px solid #e0e0e0}
-        .advantages li:before{content:"✓";position:absolute;left:0;color:#191919;font-weight:bold;font-size:18px}
+        .specs-table tr {
+            border-bottom: 1px solid var(--ast-global-color-6);
+        }
         
-        /* CTA */
-        .cta-section{background:#191919;color:#fff;padding:80px 0;text-align:center}
-        .cta-section h2{font-size:36px;color:#fff;margin-bottom:20px}
-        .cta-section p{font-size:18px;margin-bottom:30px;opacity:0.9}
-        .cta-button{display:inline-block;background:#fff;color:#191919;padding:15px 40px;font-weight:700;border-radius:0;transition:all 0.3s;margin:10px}
-        .cta-button:hover{background:#f5f5f5}
+        .specs-table td {
+            padding: 15px 10px;
+            font-size: 15px;
+        }
+        
+        .specs-table td:first-child {
+            font-weight: 600;
+            color: var(--ast-global-color-2);
+            width: 45%;
+        }
+        
+        /* Advantages Box */
+        .advantages-box {
+            background: var(--ast-global-color-6);
+            padding: 2em;
+            border-radius: 4px;
+            margin-top: 2em;
+        }
+        
+        .advantages-box h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .advantages-box ul {
+            list-style: none;
+        }
+        
+        .advantages-box li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .advantages-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--ast-global-color-0);
+            font-weight: bold;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--ast-global-color-4);
+            padding: 3em;
+            margin-top: 3em;
+            text-align: center;
+            border-top: 1px solid var(--ast-global-color-6);
+            border-bottom: 1px solid var(--ast-global-color-6);
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: var(--ast-global-color-3);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--ast-global-color-0);
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+            border: 1px solid var(--ast-global-color-0);
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            background: #ffffff;
+            color: var(--ast-global-color-0);
+        }
         
         /* Footer */
-        .site-footer{background:#191919;color:#fff;padding:40px 0;text-align:center}
+        .site-footer {
+            background-color: var(--ast-global-color-4);
+            border-top: 1px solid var(--ast-global-color-6);
+            padding: 40px 0;
+        }
         
-        @media(max-width:768px){
-            .product-grid{grid-template-columns:1fr}
-            .product-header h1{font-size:30px}
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .footer-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .footer-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        .footer-contact {
+            text-align: right;
+        }
+        
+        .footer-contact a {
+            display: block;
+            margin: 5px 0;
+            font-weight: 500;
+        }
+        
+        .footer-contact a:hover {
+            color: var(--ast-global-color-1);
+        }
+        
+        /* Below Footer */
+        .site-below-footer {
+            background-color: var(--ast-global-color-4);
+            min-height: 80px;
+            border-top: 1px solid var(--ast-global-color-6);
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .footer-copyright {
+            color: var(--ast-global-color-3);
+            font-size: 14px;
+        }
+        
+        /* Mobile */
+        @media (max-width: 921px) {
+            .product-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            h1 { font-size: 30px; }
+            h2 { font-size: 25px; }
+            h3 { font-size: 20px; }
+            
+            .site-title { font-size: 28px; }
+            
+            .main-header-menu {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="header-main">
-                <div class="site-title"><a href="https://grusman.ro">Grusman Exclusive</a></div>
+    <header class="site-header" id="masthead">
+        <div class="main-header-bar">
+            <div class="ast-container">
+                <div class="site-header-primary-section">
+                    <div class="site-branding">
+                        <div class="site-title">
+                            <a href="/">Grusman <span>Exclusive</span></a>
+                        </div>
+                    </div>
+                    <nav class="main-navigation">
+                        <ul class="main-header-menu">
+                            <li class="menu-item"><a href="/" class="menu-link">Home</a></li>
+                            <li class="menu-item"><a href="/about-us/" class="menu-link">About Us</a></li>
+                            <li class="menu-item"><a href="/shop" class="menu-link">Products</a></li>
+                            <li class="menu-item"><a href="/projects/" class="menu-link">Projects</a></li>
+                            <li class="menu-item"><a href="/contact/" class="menu-link">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="product-header">
-        <div class="container">
-            <h1>Balustrada din Sticlă</h1>
-            <p class="subtitle">Sisteme moderne de balustrade din sticlă securizată pentru interior și exterior</p>
+    <div class="ast-single-entry-banner">
+        <div class="ast-container">
+            <h1>Balustradă din Sticlă</h1>
         </div>
-    </section>
+    </div>
 
-    <section class="product-content">
-        <div class="container">
-            <div class="product-grid">
-                <div class="product-image">
-                    <img src="https://via.placeholder.com/600x400/f0f0f0/666?text=Balustrada+Sticla" alt="Balustrada din Sticla">
-                </div>
-
-                <div class="product-info">
-                    <h2>Sticlă Securizată Profesională</h2>
-                    <div class="product-description">
-                        <p>Balustradele din sticlă securizată oferă o soluție modernă și elegantă pentru protecția spațiilor la înălțime, permițând în același timp trecerea luminii naturale.</p>
-                        <p><strong>Aplicații:</strong> Scări interioare/exterioare, terase, balcoane, piscine, spații comerciale, birouri.</p>
+    <div class="site-content">
+        <div class="ast-container">
+            <div class="content-area">
+                <div class="product-layout">
+                    <div class="product-gallery">
+                        <div class="product-main-image">
+                            <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&q=80" alt="Balustradă din sticlă Grusman">
+                        </div>
                     </div>
-
-                    <table class="specs-table">
-                        <tr><td>Tip sticlă</td><td>Securizată (temperată) sau laminată</td></tr>
-                        <tr><td>Grosime</td><td>8mm, 10mm, 12mm, 15mm</td></tr>
-                        <tr><td>Finisaj</td><td>Transparent, sablat, colorat</td></tr>
-                        <tr><td>Sistem prindere</td><td>Point-fixed, Canal U, Stâlpi</td></tr>
-                        <tr><td>Material accesorii</td><td>Inox 304/316, aluminiu eloxat</td></tr>
-                        <tr><td>Garanție</td><td>10 ani sticlă, 5 ani accesorii</td></tr>
-                    </table>
+                    
+                    <div class="product-summary">
+                        <h2>Balustradă din Sticlă Securizată</h2>
+                        
+                        <p class="product-description">
+                            Balustradele din sticlă oferă o soluție modernă și elegantă pentru protecția spațiilor 
+                            deschise. Sticla securizată sau laminată asigură siguranța maximă, în timp ce designul 
+                            minimalist permite trecerea luminii și păstrează senzația de spațiu deschis. Ideal pentru 
+                            balcoane, terase, scări interioare și spații comerciale.
+                        </p>
+                        
+                        <table class="specs-table">
+                            <tbody>
+                                <tr><td>Tip sticlă</td><td>Securizată / laminată</td></tr>
+                                <tr><td>Grosime sticlă</td><td>10 mm – 21.5 mm</td></tr>
+                                <tr><td>Finisaj sticlă</td><td>Transparentă / Mată / Colorată</td></tr>
+                                <tr><td>Sistem de prindere</td><td>Point-fixed / Profil U / Standoff</td></tr>
+                                <tr><td>Înălțime standard</td><td>90 cm – 110 cm (conform normelor)</td></tr>
+                                <tr><td>Rezistență la impact</td><td>Clasa 1 (conform EN 12600)</td></tr>
+                                <tr><td>Garanție</td><td>10 ani</td></tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="advantages-box">
+                            <h3>Avantaje</h3>
+                            <ul>
+                                <li>Design modern și minimalist</li>
+                                <li>Permite trecerea luminii naturale</li>
+                                <li>Siguranță maximă – sticlă securizată</li>
+                                <li>Rezistentă la intemperii și UV</li>
+                                <li>Ușor de întreținut și curățat</li>
+                                <li>Montaj rapid și curat</li>
+                                <li>Personalizabilă – dimensiuni și finisaje</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>    </div>
 
-            <div class="advantages">
-                <h3>Avantaje</h3>
-                <ul>
-                    <li>Design modern și elegant care se integrează în orice stil arhitectural</li>
-                    <li>Permite trecerea luminii naturale, nu blochează vederea</li>
-                    <li>Rezistentă la șocuri termice și mecanice</li>
-                    <li>Ușor de întreținut, nu ruginește și nu se degradează în timp</li>
-                    <li>Siguranță maximă - sticla securizată nu formează cioburi ascuțite</li>
-                    <li>Opțiuni multiple de finisaje: transparent, sablat, colorat în masă</li>
-                    <li>Sisteme de prindere discrete care pun în valoare sticla</li>
-                    <li>Conformitate cu normele europene de siguranță EN 12600</li>
-                </ul>
-            </div>
+    <div class="cta-section">
+        <div class="ast-container">
+            <h2>Solicită o Ofertă Personalizată</h2>
+            <p>Contactează-ne pentru detalii despre balustradele din sticlă și soluții personalizate</p>
+            <a href="mailto:sorin@grusman.ro" class="cta-button">Cere Ofertă</a>
         </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <h2>Solicită Ofertă Personalizată</h2>
-            <p>Contactează-ne pentru măsurători și ofertă personalizată în funcție de proiectul tău.</p>
-            <a href="tel:0770508549" class="cta-button">📞 0770 508 549</a>
-            <a href="mailto:haletomesti@gmail.com" class="cta-button">✉️ haletomesti@gmail.com</a>
-        </div>
-    </section>
+    </div>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>© 2025 Grusman Properties SRL. Toate drepturile rezervate.</p>
+        <div class="ast-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Grusman Properties SRL</h3>
+                    <p>Bd. Metalurgiei 105, Sector 4, București</p>
+                    <p>Tel: 0770 508 549</p>
+                </div>
+                <div class="footer-contact">
+                    <p><a href="mailto:sorin@grusman.ro">sorin@grusman.ro</a></p>
+                    <p><a href="https://www.grusman.ro">www.grusman.ro</a></p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <div class="site-below-footer">
+        <div class="ast-container">
+            <p class="footer-copyright">© 2026 Grusman Properties SRL. Toate drepturile rezervate.</p>
+        </div>
+    </div>
 </body>
 </html>
